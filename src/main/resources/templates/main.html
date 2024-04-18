@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Header with Logo and Tabs</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+    <style>
+        /* Дополнительные стили */
+        header {
+            background-color: #060662; /* Изменение цвета фона заголовка */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавление тени */
+        }
+
+        a {
+            color: #fff;
+        }
+
+
+        .card {
+            margin: 50px auto;
+        }
+
+        .category-tag {
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            padding: 3px 6px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .add-category-btn {
+            float: right;
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .status{
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .status-0{
+            color:blue;
+        }
+        .status-1{
+            color:	#FFFF00;
+        }
+        .status-2{
+            color:green;
+        }
+        .status-3{
+            color:red;
+        }
+    </style>
+
+</head>
+<body>
+<header class="d-flex align-items-center justify-content-between px-4 py-2">
+    <div class="d-flex align-items-center">
+        <b class="text-white">Trello.com</b>
+        <div class="nav">
+            <a class="nav-link" href="/">All Folders</a>
+            <a class="nav-link" href="#">Categories</a>
+        </div>
+    </div>
+    <hr class="d-none d-md-block mx-4"/>
+    <!-- Разделитель видимый на медиа-запросе MD и выше -->
+</header>
+
+<div layout:fragment="mainFragment">
+
+</div>
+
+<!-- Подключение Bootstrap JS (необходимо для работы некоторых компонентов) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
